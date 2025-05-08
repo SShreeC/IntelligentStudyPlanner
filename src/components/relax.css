@@ -1,0 +1,54 @@
+/* Relaxation Corner styling */
+.relaxation-corner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Card container */
+.relaxation-corner form {
+  background-color: #fff; /* White background for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Card hover effect */
+.relaxation-corner form:hover {
+  transform: translateY(-5px);
+}
+
+/* Heading */
+.relaxation-corner h2 {
+  color: #333;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+.relaxation-corner input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.relaxation-corner input[type="text"]:focus {
+  border-color: #6a8cff;
+  box-shadow: 0 0 10px rgba(106, 140, 255, 0.5);
+}
+
+
+

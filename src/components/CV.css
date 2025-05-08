@@ -1,0 +1,502 @@
+/* Main Container Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content";
+  height: 100vh;
+}
+
+/* Navbar Styles */
+.top-navbar {
+  grid-area: navbar;
+  background-color: #3f51b5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+
+  position: fixed;
+}
+
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column; /* Default to column layout for small screens */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row; /* Switch to row layout for larger screens */
+  }
+}
+
+/* Card Styles */
+.card {
+  width: 100%; /* Full width within its container */
+  max-width: 600px; /* Adjusted for larger cards */
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Subject Input Card */
+.subject-input-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #f9f9f9; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 16px auto; /* Center horizontally with margin */
+}
+
+/* Input and Button Styles */
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between input and buttons */
+  width: 100%;
+}
+
+.subject-input {
+  flex: 1; /* Grow to fill available space */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; 
+  box-sizing: border-box; 
+}
+
+.add-button,
+.done-button {
+  padding: 12px 20px; /* Increased padding */
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px; 
+}
+
+.add-button {
+  background-color: #4CAF50; /* Green */
+}
+
+.done-button {
+  background-color: #f44336; /* Red */
+}
+
+.add-button:hover,
+.done-button:hover {
+  opacity: 0.8;
+}
+
+/* Calendar Styles */
+.calendar-view {
+  width: 100%;
+  max-width: 600px; /* Adjust width as needed */
+  background-color: #f9f9f9; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Tile styles */
+.react-calendar__tile {
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.react-calendar__tile--active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Custom Task Dots */
+.task-dots {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px;
+}
+
+/* Task List Styles */
+.tasks-list {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; /* Adjust max-width as needed */
+}
+
+.tasks-list h3 {
+  margin-bottom: 10px;
+}
+
+.task-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.no-tasks-message {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+}
+
+/* Schedule Task Styles */
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px; /* Increased padding */
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px; /* Increased margin */
+  text-align: center;
+}
+
+.schedule-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.schedule-form label {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Input Fields */
+.schedule-form input,
+.schedule-form select,
+.schedule-form textarea {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.schedule-form input:focus,
+.schedule-form select:focus,
+.schedule-form textarea:focus {
+  border-color: #007bff;
+}
+
+.schedule-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.schedule-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Task Display Styling */
+.scheduled-tasks-container {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.scheduled-task {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.scheduled-task:last-child {
+  border-bottom: none;
+}
+
+.scheduled-task h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.scheduled-task p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Message Styling */
+.success-message {
+  color: green;
+  margin-top: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Three Column Layout */
+.three-column-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Increased gap between columns */
+  margin-top: 20px;
+}
+
+.tasks-column,
+.relax-column,
+.calendar-column {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 10px; /* Increased border radius */
+  padding: 20px; /* Increased padding */
+  background-color: #f9f9f9; /* Light background for columns */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+}
+
+.tasks-column h3,
+.relax-column h3,
+.calendar-column h3 {
+  text-align: center;
+  margin-bottom: 20px; /* Consistent margin for headings */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+    grid-template-rows: auto auto; /* Adjust rows for mobile */
+  }
+
+  .sidebar {
+    height: auto; /* Allow sidebar to grow as needed */
+  }
+
+  .three-column-layout {
+    flex-direction: column; /* Stack columns on small screens */
+  }
+}
+.layout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tasks-column, .schedule-column, .calendar-column {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  height: 100%;
+}
+
+.task-card {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.schedule-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove borders */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the button inline */
+  font-size: 16px; /* Increase font size */
+  margin: 10px 0; /* Margin above and below the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.schedule-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.task-card {
+  margin: 5px 0; /* Margin between task cards */
+  padding: 10; /* Padding inside task cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.water-intake-container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.water-intake-container:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #4a90e2;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.calculate-button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.calculate-button:hover {
+  background-color: #357ab8;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e0f7fa;
+  border-radius: 10px;
+}
+
+.cup-icons {
+  display: flex;           /* Use flexbox to arrange items in a row */
+  justify-content: center; /* Center the cups horizontally */
+  flex-wrap: wrap;         /* Allow wrapping if there are many cups */
+  margin-top: 10px;
+  gap: 5px;                /* Space between cup icons */
+}
+
+.cup-icon {
+  width: 40px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  animation: sparkle 0.5s ease-in-out infinite alternate;
+}
+/* Specific styles for AuthPopup */
+.auth-popup-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark overlay for better focus */
+}
+
+.auth-popup-card {
+  max-width: 90%; /* Limit width to 90% of viewport */
+  width: 350px; /* Set a specific width for the popup */
+  border-radius: 10px; /* Round corners */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.auth-popup-body {
+  padding: 20px; /* Add padding for spacing */
+}
+
+.auth-popup-actions {
+  margin-bottom: 15px; /* Space below the close button */
+}
+
+.auth-popup-close-btn {
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+}
+
+.auth-popup-close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
+  border-radius: 50%; /* Round button on hover */
+}
+.layout-container {
+  display: flex;
+  justify-content: space-between; /* Space between columns */
+  padding: 20px;
+}
+
+.column {
+  flex: 1; /* Each column takes equal space */
+  margin: 0 10px; /* Space between columns */
+  padding: 15px;
+  border: 1px solid #ccc; /* Optional: for visual separation */
+  border-radius: 5px; /* Optional: for rounded corners */
+  background-color: #f9f9f9; /* Optional: background color */
+}
+
+.schedule-button {
+  margin-top: 10px; /* Optional: space above the button */
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: green; /* Change this color to your preference */
+  border-radius: 50%;
+  display: inline-block;
+}

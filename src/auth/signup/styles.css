@@ -1,0 +1,408 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Updated font */
+  background-color: #f4f4f4;
+}
+
+/* Style for the overlay */
+.fixed {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for the overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar {
+  margin-right: 50px; /* Adjust this value as needed */
+}
+
+.w-12 {
+  width: 48px; /* 12 * 4 (since w-12 is based on Tailwind's width scale) */
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.parent-container {
+  padding-right: 20px; /* Add padding inside the parent */
+}
+
+/* Style for the card */
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  max-width: 100%;
+  width: 100%;
+  max-height: 100vh; /* Limit card height to viewport height */
+}
+
+/* Style for the card body */
+.card-body {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 1rem; /* Padding inside the card */
+}
+
+/* Style for the close button */
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem; /* Space between the close button and content */
+}
+
+header {
+  background-color: #1f2937; /* Darker shade */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #374151; /* Improved hover color */
+}
+
+.welcome-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.welcome-section h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.welcome-section p {
+  font-size: 18px;
+  color: #6b7280; /* Updated text color */
+}
+
+.get-started-btn {
+  padding: 15px 30px;
+  background-color: #3b82f6; /* Daisy UI Primary */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #2563eb; /* Improved hover */
+}
+
+/* Auth Popup Styles */
+.auth-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.auth-card h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #1f2937; /* Darker text */
+  text-align: center;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+.auth-card button {
+  padding: 10px 20px;
+  background-color: #3b82f6; /* Daisy UI Primary */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-card button:hover {
+  background-color: #2563eb;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #e3342f;
+}
+
+/* Form Specific Styles */
+.form-wrap {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.tabs h3 {
+  margin: 0 1rem;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs h3.active {
+  border-bottom: 2px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2563eb;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  margin-right: 0.5rem;
+}
+
+.help-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.help-text a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Subject Input Card */
+.subject-input-card {
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 16px; /* Padding inside the card */
+  max-width: 500px; /* Adjusted width to fit input and buttons */
+  margin: auto; /* Center the card */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Space between elements */
+}
+
+/* Container for input and buttons */
+.subject-input-container {
+  display: flex; /* Use flexbox for input and buttons */
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Space between input and buttons */
+}
+
+/* Text Input Field */
+.subject-input-card .input {
+  flex: 1; /* Allow input to take available space */
+  padding: 10px; /* Padding inside the input field */
+  border: 1px solid #ddd; /* Light border around the input field */
+  border-radius: 5px; /* Rounded corners for the input field */
+  font-size: 1rem; /* Font size for the input field */
+}
+
+/* Button Styles */
+.subject-input-card .btn {
+  padding: 10px; /* Padding inside buttons */
+  font-size: 1rem; /* Font size for buttons */
+  border-radius: 5px; /* Rounded corners for buttons */
+  min-width: 80px; /* Minimum width for buttons */
+}
+
+.subject-input-card .btn-outline {
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  background-color: transparent;
+}
+
+.subject-input-card .btn-outline:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.subject-input-card .btn-primary {
+  border: none;
+  color: white;
+  background-color: #3b82f6;
+}
+
+.subject-input-card .btn-primary:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .subject-input-card {
+    width: 90%; /* Full width on smaller screens */
+    padding: 10px; /* Reduced padding */
+  }
+
+  .subject-input-container {
+    flex-direction: column; /* Stack input and buttons vertically on small screens */
+    gap: 10px; /* Space between elements */
+  }
+
+  .subject-input-card .btn {
+    width: 100%; /* Full width for buttons on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 30px; /* Smaller font size for smaller screens */
+  }
+
+  .welcome-section p {
+    font-size: 16px; /* Smaller font size for smaller screens */
+  }
+
+  .get-started-btn {
+    padding: 10px 20px; /* Smaller button padding */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .auth-card {
+    width: 90%; /* Full width on very small screens */
+    padding: 20px; /* Reduced padding */
+  }
+
+  .auth-card h2 {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .auth-card input {
+    padding: 8px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .auth-card button {
+    padding: 8px 16px; /* Smaller button padding */
+    font-size: 14px; /* Smaller font size */
+  }
+}

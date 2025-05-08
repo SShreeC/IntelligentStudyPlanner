@@ -1,0 +1,37 @@
+npm install @testing-library/jest-dom@^5.17.0
+npm install @testing-library/react@^13.4.0
+npm install @testing-library/user-event@^13.5.0
+npm install axios@^1.7.7
+npm install bcrypt@^5.1.1
+npm install body-parser@^1.20.3
+npm install bootstrap@^5.3.3
+npm install browserify-zlib@^0.2.0
+npm install buffer@^6.0.3
+npm install cors@^2.8.5
+npm install crypto@^1.0.1
+npm install crypto-browserify@^3.12.0
+npm install daisyui@^4.12.10
+npm install dotenv@^16.4.5
+npm install express@^4.21.0
+npm install jsonwebtoken@^9.0.2
+npm install mongoose@^8.5.4
+npm install nodemailer@^6.9.15
+npm install path-browserify@^1.0.1
+npm install querystring-es3@^0.2.1
+npm install react@^18.3.1
+npm install react-bootstrap@^2.10.4
+npm install react-calendar@^5.0.0
+npm install react-dom@^18.3.1
+npm install react-router-dom@^6.26.1
+npm install react-scripts@5.0.1
+npm install stream-browserify@^3.0.0
+npm install url@^0.11.4
+npm install web-vitals@^2.1.4
+
+ML dependencies:
+scikit-learn==1.4.2
+pandas==2.2.2
+numpy==1.26.4
+flask==3.0.2
+flask-cors==4.0.1
+joblib==1.4.2
